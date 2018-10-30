@@ -5,11 +5,12 @@ const passport = require('passport')
 router.get('/google', passport.authenticate('google', { scope: ['profile', 'email'] }))
 
 router.get('/google/callback',
-    passport.authenticate('google', { failureRedirect: '/' }),
-    function (req, res) {
-        // Successful authentication, redirect home.
-        // res.redirect('/dashboard');
-        res.redirect('/dashboard');
-    });
+    // passport.authenticate('google', { failureRedirect: '/' }), (req, res) => {
+    //     
+    // }
+    (req, res) => { res.send('Hello redirect') }
+);
+
+module.exports = router;
 
 module.exports = router
