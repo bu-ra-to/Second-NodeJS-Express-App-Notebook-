@@ -9,7 +9,7 @@ router.get('/google/callback',
     function (req, res) {
         // Successful authentication, redirect home.
         // res.redirect('/dashboard');
-        res.send('Google Auth Worked')
+        res.redirect('/dashboard');
     });
 
 module.exports = router
