@@ -73,7 +73,6 @@ app.use(express.static(path.join(__dirname, 'public')))
 // Use Routes
 app.use('/', index);
 app.use('/stories', stories);
-// app.use('/dashboard', index);
 app.use('/auth', auth);
 
 
